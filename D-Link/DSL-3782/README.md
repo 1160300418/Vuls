@@ -11,4 +11,4 @@ Some vulnerabilities (including a stack-based buffer overflow and a command inje
 
 We have reported the vulnerability to the vendor and got confirmation.
 
-![image-20220620171848698](imgs\mail.png)
+![image-20220620171848698](imgs/mail.png)
