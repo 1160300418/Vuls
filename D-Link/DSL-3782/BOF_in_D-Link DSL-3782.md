@@ -10,7 +10,7 @@ Affected products:　　　DSL-3782 v1.01, DSL-3782 v1.03
 
 Code bellow (in cfg_manager) performs the traceroute (or ping) test in the Diagnostic webpage.
 
-![image-20220424095429446](D:\images\typora\image-20220424095429446.png)
+![image-20220424095429446](imgs/bof_code1.png)
 
 The *getAttrValue* method at `.text: 0x474bA4` can lead to a stack-based buffer overflow.
 
@@ -20,7 +20,7 @@ The *getAttrValue* method at `.text: 0x474bA4` can lead to a stack-based buffer 
 
 The dst parameter (a4) of strcpy corresponds to the `$a3` register in the above picture, which comes from the `$s1` register, and the `$s1` register stores an offset address in stack (at `.text: 474af0`).
 
-![image-20220424195414876](D:\images\typora\image-20220424195414876.png)
+![image-20220424195414876](imgs/bof_code2.png)
 
 
 
@@ -101,7 +101,7 @@ if __name__ == '__main__':
 
 ### Attack effect
 
-![image-20211230112947079](D:\images\typora\image-20211230112947079.png)
+![image-20211230112947079](imgs/bof_effect_1.01.png)
 
 Since the command we executed in the exploit script (line 41) is `echo yab. > /tmp/1`, we can confirm that our attack was successful by printing the content in file /tmp/1.
 
@@ -191,6 +191,6 @@ if __name__ == '__main__':
 
 ### Attack effect
 
-![image-20220613164859716](C:\Users\sz\AppData\Roaming\Typora\typora-user-images\image-20220613164859716.png)
+![image-20220613164859716](imgs/bof_effect_1.03.png)
 
 Since the command we executed in the exploit script (line 37) is `reboot` , you can see that the emulator (firmadyne) is rebooting.  
