@@ -1,0 +1,1 @@
+D-Link DIR-605L has buffer overflow vulnerabilities in the handling of the curTime parameter, affecting more than twenty interfaces. They share similar processing logic —— all finally copies the content of the unchecked curTime parameter onto stack memory via the sprintf function, which could lead to buffer overflow vulnerabilities.
