@@ -16,7 +16,7 @@ A stack-based buffer overflow vulnerability exsist in D-Link N300 WI-FI Router D
 
 While processing the post reuqest "/goform/formLogin", the value of "FILECODE" parameter (as shown at line 36-58 of Figure A) which can be arbitrarily long is eventually copied onto stack memory by "sprintf" function (as shown at line 12 of Figure B), and could lead to a buffer overflow. The attackers can construct a payload to carry out arbitrary code attacks.
 
-![Fig1](imgs/Fig1.png)
+![Fig1](imgs/fig1.png)
 
 Figure A: The decompiled code of function which read value of parameter "FILECODE" and call getAuthCode function with the value as a parameter.
 
