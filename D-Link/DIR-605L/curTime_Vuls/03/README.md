@@ -14,7 +14,7 @@ Firmware: https://support.dlink.com/resource/SECURITY_ADVISEMENTS/DIR-605L/REVB/
 # Vulnerability Details
 A stack-based buffer overflow vulnerability exsist in D-Link N300 WI-FI Router DIR-605L (firmware version v2.13 B01 Beta) which may result in remote code excution or deninal of service. The issue exists in the binary "boa" which resides in "/bin" folder, and the binary is responsible for serving http connection received by the device. While processing the post reuqest "/goform/formSetWanDhcpplus", the value of "curTime" parameter which can be arbitrarily long is copied onto stack memory by "sprintf" function (as shown at line 72, 254 of Figure A), and could lead to a buffer overflow. The attackers can construct a payload to carry out arbitrary code attacks.
 
-![FigB](imgs/FigB.png)
+![FigB](imgs/figB.png)
 ![figA](imgs/figA.png)
 
 Figure A: The decompiled code of function which read value of parameter "curTime" and call sprintf function with the value as a parameter.

@@ -16,7 +16,7 @@ A stack-based buffer overflow vulnerability exsist in D-Link N300 WI-FI Router D
 
 While processing the post reuqest "/goform/formEasySetupWizard3", the value of "wan_connected" parameter which can be arbitrarily long is eventually copied onto stack memory by "sprintf" function (as shown at line 126-127 of Figure A), and could lead to a buffer overflow. The attackers can construct a payload to carry out arbitrary code attacks.
 
-![Fig1](imgs/Fig1.png)
+![Fig1](imgs/fig1.png)
 
 ![fig2](imgs/fig2.png)
 

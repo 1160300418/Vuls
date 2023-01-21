@@ -16,7 +16,7 @@ A stack-based buffer overflow vulnerability exsist in D-Link N300 WI-FI Router D
 
 While processing the post reuqest "/goform/formWlanGuestSetup", the value of "webpage" parameter which can be arbitrarily long is eventually copied onto stack memory by "sprintf" function, and could lead to a buffer overflow. The value of "webpage" parameter is first assigned to the global variable by the strcpy function (as shown at line 89-92 of Figure A), and then this global variable is finally passed to the sprintf function as an argument (as shown in Figure B-D). The attackers can construct a payload to carry out arbitrary code attacks.
 
-![Fig1](imgs/Fig1.png)
+![Fig1](imgs/fig1.png)
 
 Figure A: The decompiled code of function which read value of parameter "webpage" and call strcpy function to assign the value to the global variable "last_url".
 
